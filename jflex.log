@@ -1,0 +1,8 @@
+Reading skeleton file "lib/idea-flex.skeleton".
+Reading "src/com/omixy/jetbrainssaltplugin/lang/lexer/saltstate/saltstate.flex"
+Constructing NFA : 12 states in NFA
+Converting NFA to DFA : 
+...
+5 states before minimization, 2 states in minimized DFA
+Old file "src/com/omixy/jetbrainssaltplugin/lang/lexer/saltstate/_SaltStateLexerBase.java" saved as "src/com/omixy/jetbrainssaltplugin/lang/lexer/saltstate/_SaltStateLexerBase.java~"
+Writing code to "src/com/omixy/jetbrainssaltplugin/lang/lexer/saltstate/_SaltStateLexerBase.java"

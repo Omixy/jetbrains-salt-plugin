@@ -1,0 +1,35 @@
+<project name="Salt State plugin" default="jflex">
+    <property name="lexer.file" value="com/ansorgit/plugins/bash/lang/lexer/_SaltStateLexerBase.java"/>
+    <property name="lexer.log" value="jflex.log"/>
+    <property name="lexer.source" value="src/com/omixy/jetbrainssaltplugin/lang/lexer/saltstate/saltstate.flex"/>
+    <property name="lexer.skeleton" value="lib/idea-flex.skeleton"/>
+    <property name="jflex.jar" value="lib/JFlex.jar"/>
+
+    <target name="jflex-clean">
+        <delete file="${lexer.file}~"/>
+        <delete file="${lexer.file}"/>
+        <delete file="${lexer.log}"/>
+    </target>
+
+    <!--    <target name="jflex-copy-resources">
+            <copy todir="out/production/BashPlugin/resources">
+                <fileset dir="resources"/>
+            </copy>
+            <copy todir="out/production/BashPlugin/doc">
+                <fileset dir="doc"/>
+            </copy>
+        </target>
+        -->
+
+    <target name="jflex"
+            description="Generate lexer from bash.flex, using idea flex skeleton and patched JFlex"
+            depends="jflex-clean">
+        <java jar="${jflex.jar}" output="${lexer.log}" fork="true">
+            <arg value="--charat"/>
+            <!-- <arg value="- -nomin"/>-->
+            <arg value="-skel"/>
+            <arg value="${lexer.skeleton}"/>
+            <arg value="${lexer.source}"/>
+        </java>
+    </target>
+</project>

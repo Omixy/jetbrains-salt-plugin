@@ -1,0 +1,1 @@
+Strongly inspired by https://github.com/jansorg/BashSupport
